@@ -1,12 +1,10 @@
 import os
 import requests
-from dotenv import load_dotenv
 from telegram import Bot
 import asyncio
 from datetime import datetime, timedelta
 from collections import defaultdict
 
-load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = int(os.getenv("CHAT_ID"))
 API_KEY = os.getenv("FOOTBALL_API_KEY")
