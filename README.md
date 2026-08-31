@@ -36,30 +36,11 @@ Telegram-бот для автоматической отправки распи�
 
 ## 🚀 Установка
 
-### 1. Клонирование репозитория
+### Клонирование репозитория
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 cd YOUR_REPOSITORY
-```
-
-### 2. Создание виртуального окружения
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-### 3. Установка зависимостей
-
-```bash
-pip install -r requirements.txt
-```
-
-Если `requirements.txt` ещё не создан:
-
-```bash
-pip install python-telegram-bot
 ```
 
 ## 🔑 Получение ключей
@@ -100,7 +81,6 @@ Repository
 | `CHAT_ID`          | ID чата Telegram           |
 | `FOOTBALL_API_KEY` | API-ключ Live Football API |
 
-> ⚠️ Никогда не публикуй реальные токены и API-ключи в репозитории.
 
 ## ⏰ Автоматическая рассылка
 
@@ -131,30 +111,6 @@ schedule:
 06:00 UTC = 09:00 МСК
 ```
 
-### Изменение времени рассылки
-
-Формат Cron:
-
-```text
-Минуты Часы День Месяц День_недели
-```
-
-Например, для запуска в **18:00 МСК**:
-
-```yaml
-schedule:
-  - cron: '0 15 * * *'
-```
-
-Поскольку:
-
-```text
-18:00 МСК - 3 часа = 15:00 UTC
-```
-
-После изменения `schedule.yml` необходимо сделать commit и push в репозиторий.
-
-GitHub Actions автоматически применит новое расписание.
 
 ## ▶️ Локальный запуск
 
