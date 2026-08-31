@@ -2,9 +2,8 @@ name: Daily Football Schedule
 
 on:
   schedule:
-    # Запуск каждый день в 06:00 UTC (это 09:00 МСК)
     - cron: '0 6 * * *'
-  workflow_dispatch: # Позволяет запустить вручную для теста
+  workflow_dispatch:
 
 jobs:
   send-schedule:
