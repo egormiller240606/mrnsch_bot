@@ -2,7 +2,7 @@ name: Daily Football Schedule
 
 on:
   schedule:
-    - cron: '33 10 * * *'
+    - cron: '37 10 * * *'  # 13:33 МСК (10:33 UTC)
   workflow_dispatch:
 
 jobs:
@@ -11,10 +11,10 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Обновили версию
+        uses: actions/checkout@v4  # Актуальная версия для Node24
 
       - name: Set up Python
-        uses: actions/setup-python@v5 # Обновили версию
+        uses: actions/setup-python@v5 # Актуальная версия для Node24
         with:
           python-version: '3.10'
 
