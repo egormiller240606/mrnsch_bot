@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 
 TOKEN = os.getenv("BOT_TOKEN")
-CHAT_ID = int(os.getenv("CHAT_ID"))
+CHAT_ID_1 = int(os.getenv("CHAT_ID"))
+CHAT_ID_2 = int(os.getenv("CHAT_ID2"))  # Добавлен второй ID чата
 API_KEY = os.getenv("FOOTBALL_API_KEY")
 
 MY_TEAMS_IDS = {
@@ -21,13 +22,13 @@ MY_TEAMS_IDS = {
 }
 
 LEAGUE_FLAGS = {
-    "LaLiga": "🇪🇸",
+    "LaLiga": "🇸",
     "Premier League": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
     "Bundesliga": "🇩🇪",
     "Serie A": "🇮🇹",
     "Ligue 1": "🇫🇷",
-    "Super Lig": "🇹🇷",
-    "Saudi Pro League": "🇸🇦",
+    "Super Lig": "🇹",
+    "Saudi Pro League": "🇦",
     "Champions League": "🏆",
     "Europa League": "🇪🇺"
 }
@@ -91,10 +92,11 @@ async def send_schedule():
             for _, match_line in matches:
                 text += f"  • {match_line}\n"
             text += "\n"
-            
-        await bot.send_message(chat_id=CHAT_ID, text=text, parse_mode='HTML')
     else:
-        await bot.send_message(chat_id=CHAT_ID, text=f"📅 No matches for our teams on {date_str}.")
+        text = f"📅 No matches for our teams on {date_str}."
+
+    for chat_id in [CHAT_ID_1, CHAT_ID_2]:
+        await bot.send_message(chat_id=chat_id, text=text, parse_mode='HTML')
 
 if __name__ == "__main__":
     asyncio.run(send_schedule())
