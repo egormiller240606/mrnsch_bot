@@ -2,7 +2,7 @@ name: Daily Football Schedule
 
 on:
   schedule:
-    - cron: '10 1 * * *'  # 13:33 МСК (10:33 UTC)
+    - cron: '10 1 * * *'
   workflow_dispatch:
 
 jobs:
