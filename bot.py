@@ -18,7 +18,7 @@ MY_TEAMS_IDS = {
     "57jcqe38hakh2hfit2zsogsb",    # Al Nassr
     "9q0arba2kbnywth8bkxlhgmdr",   # Chelsea
     "3vo5mpj7catp66nrwwqiuhuup",   # Inter
-    "agh9ifb2mw3ivjusgedj7c3fe"    # Barcelona
+    "agh9ifb2mw3ivjusgedj7c3fe",    # Barcelona
     "d5m6k7n8p9q0r1s2t3u4v5w6x",  # Galatasaray
     "y7z8a9b0c1d2e3f4g5h6i7j8k"   # Roma
 }
