@@ -7,7 +7,7 @@ from collections import defaultdict
 
 TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID_1 = int(os.getenv("CHAT_ID"))
-CHAT_ID_2 = int(os.getenv("CHAT_ID2"))  # Добавлен второй ID чата
+CHAT_ID_2 = int(os.getenv("CHAT_ID2"))  
 API_KEY = os.getenv("FOOTBALL_API_KEY")
 
 MY_TEAMS_IDS = {
